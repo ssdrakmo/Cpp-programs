@@ -1,0 +1,41 @@
+//UC Santa Cruz C++ for C programmers
+//Homework 1:Converting C program to C++ program, by Sharvari Desai
+//C++ program to sum the elements of the vector
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+//defining function "sum" which sums the elements of the vector and returns it
+inline int sum(vector<int> v,int acc,int N)
+{
+    for(int i=0;i<N;++i)
+    {
+        acc=acc+v[i];
+    }
+    return acc;
+}
+
+int main()
+{
+    const int N=40;
+    int accum=0,s=0;
+    
+    //declaring vector 'data'
+    vector<int> data;
+    
+    //loop for adding elements to the vector
+    for(int i=0;i<N;++i)
+    {
+        data.push_back(i);
+    }
+    
+    //calling function 'sum' which returns the integer value and assigns it to 's'
+    s=sum(data,accum,N);
+    
+    //prints the sum of th eements of the vector
+    cout<<"Sum is "<<endl<<s;
+    
+    return 0;
+}
